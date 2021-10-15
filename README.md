@@ -7,7 +7,7 @@ The package can be installed in R by the commands
 
 *install.packages("spread", repos =  "https://folkehelseinstituttet.github.io/drat/")*
 
-*install_git("https://github.uio.no/geirs/smc.covid")*
+*install_git("https://github.com/geirstorvik/smc.covid")*
 
 
 The main algorithm is a version of sequential Monte Carlo (the simplest bootstrap filter) where there are two underlying processes, one defining the daily reproduction numbers and one defining a SEIR model.
