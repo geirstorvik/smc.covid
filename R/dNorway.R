@@ -16,5 +16,5 @@
 #' @keywords datasets
 #' @name dNorway
 #' @usage data(dNorway)
-#' @format A list of 5 objects, each explained above
+#' @format A list of 5 objects, each explained above though
 NULL
