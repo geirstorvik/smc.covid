@@ -16,7 +16,7 @@ dyn_model = "AR_mu_0"               #AR model with mu=0
 #Takes about ?? on a linux server using 4 cores
 #Increasing to 2000 should give reasonable estimates of the R process for this data set
 #In the paper we have used 20000 which takes 4-5 hours on a linux server with 50 cores
-B = 50
+B = 500
 N_cores = 4
 
 #Directory for data and storing results

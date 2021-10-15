@@ -135,7 +135,6 @@ if(PLOT)
   print(smc_plot_data(res.smc$hospD.sim,days,end_date=end_date2,test_date=as.Date("2020-08-01"),pred_date=end_date,
                       datD=hospD2[hospD2$date<=end_date2],trunc=60))
   dev.off()
-  #Test
   
   # Plot predicted test data, including actual observations
   n = testD$date[1]-start_date
