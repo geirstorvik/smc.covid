@@ -18,7 +18,7 @@ There are also two routines for performing particle PMCMC. **smc_PMCMC_par** upd
 
 An example dataset based on real data from Norway, **Norway_adj**, is provided together with a script, **run_Norway.R** (available in the test directory, you probably need to download this file separatly). Note that in order to obtain reasonable results at least 5000 particles should be used, but a run is time-consuming. The implementation is parallelized, so using 10-50 cores is preferable. For testing, smaller number of particles and/or earlier end-dates can be used.
 
-For testing of installation and that it works, an alternative script, **run_Norway_test.R** is also given which uses only 4 cores, have much less particles and only run for a short time period. Results should not be trusted here though.
+For testing of installation and that it works, an alternative script, **run_Norway_test.R** is also given which uses only 4 cores, have much less particles and only run for a short time period. Results should not be trusted here.
 
 
 
