@@ -1,0 +1,21 @@
+#Changes
+smc_init_sim/smc_particle_sim
+  - Changed the simulation of days until hosipitalisation so that all incidences at time t are allocated to future days when simulation of t 
+  - Removed predict_from as input, not used
+  - included insT as output, delay of testing, same structure as insH
+smc_loglik_mem/smc_loglik
+ Removed Hosp_INS and INS, not used
+ Included q_test as input, probabilities for delays on testing
+ Included test_data as input
+ included pi_test as input, pi_0,pi_1
+
+run_smc_model_mem.r:
+  Changed prob_h to be a vector of two, if not get NA on weights.
+  
+  
+  
+  
+  
+  
+   Removed the use of hospD as global variable, rather use hosp_data as sent in to the function
+  Also then removed hospD in the run-script

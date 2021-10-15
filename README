@@ -1,0 +1,8 @@
+This directory should contain everything that is used for making the plots for the paper submitted at 131220.
+
+The scripts are made for running from /home/geirs/psmc/geir_code/ and everything was stored in the ../code area
+
+Data was used up to Nov 29, but last days were not corrected for not complete reports. Should be rerun
+
+Updating of pi should probably have been done with another prior.
+

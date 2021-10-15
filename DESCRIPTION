@@ -1,0 +1,19 @@
+Package: smc.covid
+Type: Package
+Title: Routines for sequential Monte Carlo for analysis of Covid-19 data
+Version: 1.0
+Date: 2020-05-24
+Author: Geir Storvik
+Maintainer: Geir Storvik <geirs@math.uio.no>
+Description: The bases is the run_model routine from ... which again uses the 
+spread: ::asymmetric_mobility_se1e2iiar for performing simulations from the spread model.Likelhoods are calculated from number of new incidences of hospitalisations
+Depends: 
+    data.table,
+    dplyr,
+    ggplot2,
+    tidybayes,
+    extraDistr,
+    R (>= 2.10)
+Imports: methods, data.table, spread
+License: General Public License
+RoxygenNote: 7.1.0
