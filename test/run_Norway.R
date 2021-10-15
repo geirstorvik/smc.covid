@@ -16,7 +16,7 @@ dyn_model = "AR_mu_0"               #AR model with mu=0
 #Takes about ?? on a linux server using 4 cores
 #Increasing to 2000 should give reasonable estimates of the R process for this data set
 #In the paper we have used 20000 which takes 4-5 hours on a linux server with 50 cores
-B = 5000
+B = 2000
 N_cores = 25
 
 #Directory for data and storing results
@@ -24,7 +24,7 @@ mdir = "./"
 resdir = paste(mdir,"test_run_",dyn_model,"_B_",B,"/",sep="")
 
 #Run settings
-RUN = TRUE               #Will run the SMC algorithm and store the results in subdirectory of resdir
+RUN = FALSE               #Will run the SMC algorithm and store the results in subdirectory of resdir
 PLOT = TRUE              #With RUN=FALSE, plotting can be performed on previously stored results
 
 #Seed
@@ -140,7 +140,7 @@ if(PLOT)
   n = testD$date[1]-start_date
   testD2 = testD
   for(i in (n-1):0)
-    testD2 = rbind(list(NA,NA,start_date+i,NA),testD2) 
+    testD2 = rbind(list(start_date+i,NA,NA),testD2) 
   #Fill in observations in forcasting interval
   testD2$Positive[502:522] = dNorway$test$Positive[336:356]
   pdf(paste(resdir,"Res_Test_Norway_",dyn_model,"_B",B,".pdf",sep=""),height=5,width=15)
