@@ -127,13 +127,13 @@ if(PLOT)
  # Plot predicted hospital data, including actual observations
  n = hospD$date[1]-start_date
  hospD2 = dNorway$hosp
- hospD2$N[hospD$date>end_date] = NA
+ hospD2$N[hospD$date>end_date2] = NA
  #hospD2 = hospD
  for(i in (n-1):0)
   hospD2 = rbind(list(start_date+i,NA),hospD2) 
  pdf(paste(resdir,"Res_Hosp_Norway_",dyn_model,"_B",B,".pdf",sep=""),height=5,width=15)
  print(smc_plot_data(res.smc$hospD.sim,days,end_date=end_date2,test_date=as.Date("2020-08-01"),pred_date=end_date,
-                     datD=hospD2[hospD2$date<=end_date],trunc=60))
+                     datD=hospD2[hospD2$date<=end_date2],trunc=60))
  dev.off()
  
  # Plot predicted test data, including actual observations
@@ -145,7 +145,7 @@ if(PLOT)
  testD2$Positive[502:522] = dNorway$test$Positive[336:356]
  pdf(paste(resdir,"Res_Test_Norway_",dyn_model,"_B",B,".pdf",sep=""),height=5,width=15)
  print(smc_plot_data(res.smc$testD.sim,days,start_date=start_date,end_date=end_date2,test_date=as.Date("2020-08-01"),pred_date=end_date,
-                     nam="Test",datD=testD2[testD2$date<=end_date],trunc=1500))
+                     nam="Test",datD=testD2[testD2$date<=end_date2],trunc=1500))
  dev.off()
  
  #Plotting dynamic parameter estimates, which parameters depend on model
